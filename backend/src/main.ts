@@ -7,24 +7,26 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const mongoose = require('mongoose');
 const uri = process.env.MONGODB_URI;
-
-interface MongoError {
-    code?: number;
-    codeName?: string;
-    errmsg?: string;
-    message?: string;
-    name?: string;
-    stack?: string;
-}
+const path = require("path");
+import { Secret } from "jsonwebtoken";
+import { MongoError } from "./utils/interfaces";
 
 // //import routes from the routes folder
-// const authRoute = require("./router/auth.ts");
-// const apiRoutes = require("./router/api.routes");
-// app.use("/api/v1/", apiRoutes);
-// app.use("/api/user", authRoute);
+const authRoute = require("./router/auth.ts");
+const apiRoutes = require("./router/api.routes");
+
+//use middlewares
+app.use(express.json());
+app.use("/api/v1/", apiRoutes);
+app.use("/api/user", authRoute);
+
+//create a home route
+app.get("/", (req: any, res: any) => {
+	res.sendFile(path.join(__dirname + "/index.html"));
+});
 
 //connect to mongoDB
-mongoose.connect(uri as String, { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect(uri as Secret, { useNewUrlParser: true, useUnifiedTopology: true })
 .then(() => {
     app.use(bodyParser.json());
     app.use(cors());
