@@ -2,7 +2,7 @@
 const express = require('express');
 require('dotenv').config();
 const app = express();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT;
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const mongoose = require('mongoose');
@@ -17,8 +17,8 @@ const apiRoutes = require("./router/api.routes");
 
 //use middlewares
 app.use(express.json());
-app.use("/api/v1/", apiRoutes);
-app.use("/api/user", authRoute);
+app.use("/api/v1/", cors(), apiRoutes);
+app.use("/api/user",cors(), authRoute);
 
 //create a home route
 app.get("/", (req: any, res: any) => {
