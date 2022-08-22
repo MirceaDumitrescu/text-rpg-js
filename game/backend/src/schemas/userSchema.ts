@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-
+import { characterSchema } from "./characterSchema";
 
 const userSchema = new mongoose.Schema({
     username: {
@@ -19,6 +19,10 @@ const userSchema = new mongoose.Schema({
     createdAt: {
         type: Date,
         default: Date.now
+    },
+    characterData: {
+        type: characterSchema,
+        required: true
     }
 });
 
