@@ -4,32 +4,40 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./login.js" defer></script>
+    <link rel="stylesheet" href="../../styles/login.css">
+    <link rel="shortcut icon" href="../../styles/assets/papyrus.png" type="image/x-icon">
     <title>Scrolls of Origin</title>
-    <link rel="stylesheet" href="../styles/login.css">
-    <link rel="shortcut icon" href="../styles/assets/papyrus.png" type="image/x-icon">
 </head>
 <body>
-    <main class="centered_form_area">
-    <header class="header_title">Scrolls of Origin</header>
-    <form>
-        <fieldset >
-            <legend>Welcome to the Origin</legend>
-                <div class="username_field_container">
-                    <label for="username" class="username_label">Username</label>
-                    <input type="text" class="username_input">
-                </div>
+    <main class="centered-flex-column">
+    <h1 class="header_title">Scrolls of Origin</h1>
+    <section class="form_container centered-flex-column">
+        <div class="buttons_container">
+            <div id="button_transition"></div>
+            <button type="button" class="toggle_button" onclick="login()">Log In</button>
+            <button type="button" class="toggle_button" onclick="register()">Sign Up</button>
+        </div>
+        <form class="input_fields_container centered-flex-column" id="login">
+            <input type="text" name="username" id="username_input-field" class="input_field" placeholder="Username" required>
+            <input type="text" name="password" id="password_input-field" class="input_field" placeholder="Password" required>
+            <div class="checkbox_container">
+                <span>Remember Password</span> <input type="checkbox" name="remember_pass" id="checkbox_pass">
+            </div>
+            <button type="submit" class="submit_button">Log in</button>
+        </form>
 
-                <div class="password_field_container">
-                    <label for="password" class="password_label">Password</label>
-                    <input type="text" class="password_input">
-                </div>
-            
-                <div class="buttons_container">
-                    <button class="login_button">Log In</button>
-                    <button class="signup_button">Sign Up</button>
-                </div>
-        </fieldset>
-    </form>
-</main>
+        <form class="input_fields_container centered-flex-column" id="register">
+            <input type="text" name="username" id="username_input-field" class="input_field" placeholder="Insert Username" required>
+            <input type="email" name="email" id="email_input-field" class="input_field" placeholder="Email Adress" required>
+            <input type="text" name="password" id="password_input-field" class="input_field" placeholder="Password" required>
+            <input type="text" name="Verify" id="verify_password_input-field" class="input_field" placeholder="Verify Password" required>
+            <div class="checkbox_container2">
+                <span>I agree to the terms and conditions</span> <input type="checkbox" name="remember_pass" id="checkbox_pass">
+            </div>
+            <button type="submit" class="submit_button">Register</button>
+        </form>
+    </section>
+    </main>
 </body>
 </html>
