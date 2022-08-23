@@ -1,0 +1,16 @@
+:root {
+    --text-color: white;
+    --background-color: #1d1d1d;
+    --primary-color: #ff0000;
+    --secondary-color: #00ffc8;
+    --tertiary-color: #11ff00;
+    --text-size: 1rem;
+    --text-size-xl: 1.5rem;
+    --text-weight: bold;
+    --text-align: center;
+    --text-decoration: none;
+    --text-transform: uppercase;
+    --text-shadow: 0 0 0.1rem rgba(0, 0, 0, 0.5);
+    --text-shadow-hover: 0 0 0.1rem rgba(0, 0, 0, 0.5);
+    --text-shadow-active: 0 0 0.1rem rgba(0, 0, 0, 0.5);
+}

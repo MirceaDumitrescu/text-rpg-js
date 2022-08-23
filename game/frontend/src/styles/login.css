@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Romanesco&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url(./assets/loginPage/papper_background.jpg);
+}
+/* Typography */
+.header_title{
+    font-size: 10rem;
+    font-family: 'Romanesco', cursive;
+}
+legend{
+    font-size: 2.5rem;
+    font-family: 'Romanesco', cursive;
+}
+.username_field_container,
+.password_field_container{
+    font-family: 'Romanesco', cursive;
+    letter-spacing: 0.1rem;
+
+}
+.password_label,
+.username_label{
+    font-size: 2rem;
+}
+.login_button,
+.signup_button{
+    font-family: 'Romanesco', cursive;
+    font-size: 1.5rem;
+}
+
+/* Strucutre */
+.centered_form_area{
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    height: 100vh;
+    justify-content: center;
+}
+.header_title{
+    padding-bottom: 1rem;
+}
+fieldset{
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+    height: 30vh;
+    width: 35vw;
+    gap: 0.5rem;
+
+
+}
+legend{
+    margin-left: 1rem;
+    border-radius: 50%;
+    padding: 1rem 1rem;
+    border:1px double black;
+    box-shadow: 1px 1px 1px black;
+    z-index: 1;
+    backdrop-filter: blur(10px);
+
+    
+}
+div{
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+}
+.username_field_container,
+.password_field_container{
+    justify-content: space-between;
+}
+
+.username_input,
+.password_input{
+    outline: none;
+    border: none;
+    margin-left:15%;
+
+}
+.password_label,
+.username_label{
+    margin-right: 35%;
+    
+}
+.buttons_container{
+    justify-content: space-between;
+    flex-direction: row;
+
+}
+.login_button,
+.signup_button{
+    padding: 0rem 1rem;
+}
+.login_button{
+    margin-left: 22.5%;
+}
+.signup_button{
+    margin-right: 1rem;
+}
+

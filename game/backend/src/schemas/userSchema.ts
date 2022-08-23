@@ -21,8 +21,8 @@ const userSchema = new mongoose.Schema({
         default: Date.now
     },
     characterData: {
-        type: characterSchema,
-        required: true
+        type: [characterSchema],
+        required: false
     }
 });
 
