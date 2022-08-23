@@ -6,156 +6,100 @@
 }
 body{
     background-image: url(./assets/loginPage/papper_background.jpg);
-    font-family: 'Romanesco', cursive;
-
 }
-.centered-flex-column{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
+/* Typography */
 .header_title{
-    font-size: 8rem;
-    width: 100%;
-    text-align: center;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    text-shadow: 0px 20px 10px sandybrown;
-    color: darkred;
-    letter-spacing: 2px;
-    -webkit-text-stroke: 0.5px black;
-    cursor: default;
-    user-select: none;
+    font-size: 10rem;
+    font-family: 'Romanesco', cursive;
+}
+legend{
+    font-size: 2.5rem;
+    font-family: 'Romanesco', cursive;
+}
+.username_field_container,
+.password_field_container{
+    font-family: 'Romanesco', cursive;
+    letter-spacing: 0.1rem;
 
 }
-
-.form_container{
-    background-color:blanchedalmond;
-    width: 360px;
-    height: auto;
-    border: 1px solid sandybrown;
-    border-radius: 10%;
-    box-shadow: 0 -15px 100px 10px sandybrown;
-    gap: 2rem;
+.password_label,
+.username_label{
+    font-size: 2rem;
+}
+.login_button,
+.signup_button{
+    font-family: 'Romanesco', cursive;
+    font-size: 1.5rem;
 }
 
-/* Slide Buttons */
-.buttons_container{
-    width: 60%;
+/* Strucutre */
+.centered_form_area{
     display: flex;
-    justify-content: space-evenly;
-    margin-top: 2rem;
-    box-shadow: 0 0 20px 9px #ff61241f;
-    border-radius: 30px;
-    position: relative;
-
-
+    flex-direction:column;
+    align-items: center;
+    height: 100vh;
+    justify-content: center;
 }
-.toggle_button{
-    font-size: 1rem;
-    background: transparent;
-    cursor: pointer;
-    padding: 0.5rem 0.5rem;
-    border: 0;
-    outline: none;
-    position: relative;
+.header_title{
+    padding-bottom: 1rem;
 }
-#button_transition{
-    position: absolute;
-    top: 0;
-    left: 0;
-    backdrop-filter: sepia(100%);
-    height: 100%;
-    width: 7rem;
-    border-radius: 30px;
-    border: 1px solid sandybrown;
-    transition: 500ms;
-
-}
-/* Inputs */
-
-.input_fields_container{
-    width: 100%;
-    align-items: flex-start;
-}
-.input_field{
-    text-align: center;
-    width: 90%;
-    margin: 0.5rem auto;
-    outline: none;
-    background-color: transparent;
-    border-top: 0;
-    border-left: 0;
-    border-right: 0;
-    border-bottom: 1px solid black;
-}
-
-.checkbox_container{
-    align-self: flex-end;
-    margin-right: 1.2rem;
+fieldset{
     display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+    height: 30vh;
+    width: 35vw;
     gap: 0.5rem;
+
+
 }
-/* checkbox custom */
-.checkbox-rect input[type="checkbox"] {
-    display: none;
-  }
-  .checkbox-rect input[type="checkbox"] + label {
-    display: block;
-    position: relative;
-    padding-left: 35px;
-    margin-bottom: 20px;
-    font: 14px/20px "Open Sans", Arial, sans-serif;
-    cursor: pointer;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-  }
-  .checkbox-rect input[type="checkbox"]:hover + label:hover {
-    color: rgb(23, 86, 228);
-  }
-  .checkbox-rect input[type="checkbox"]:hover + label:before {
-    background: #50565a;
-    box-shadow: inset 0px 0px 0px 2px #f7f2f2;
-  }
-  .checkbox-rect input[type="checkbox"] + label:last-child {
-    margin-bottom: 0;
-  }
-  .checkbox-rect input[type="checkbox"] + label:before {
-    content: "";
-    display: block;
-    width: 1.4em;
-    height: 1.4em;
-    border: 1px solid #343a3f;
-    border-radius: 0.2em;
-    position: absolute;
-    left: 0;
-    top: 0;
-    -webkit-transition: all 0.2s;
-    transition: all 0.2s;
-    background: #f3f3f3;
-  }
-  .checkbox-rect input[type="checkbox"]:checked + label:before {
-    width: 1.3em;
-    height: 1.3em;
-    border-radius: 0.2em;
-    border: 2px solid #fff;
-    -webkit-transform: rotate(90deg);
-    transform: rotate(90deg);
-    background: #50565a;
-    box-shadow: 0 0 0 1px #000;
-  }
-/* checkbox end */
-.submit_button{
-    color: blanchedalmond;
-    width: 40%;
-    margin: 0.75rem auto;
-    margin-bottom: 1.5rem;
-    padding: 0.5rem 0.2rem;
-    border-radius: 30px;
-    border: 0;
+legend{
+    margin-left: 1rem;
+    border-radius: 50%;
+    padding: 1rem 1rem;
+    border:1px double black;
+    box-shadow: 1px 1px 1px black;
+    z-index: 1;
+    backdrop-filter: blur(10px);
+
+    
+}
+div{
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+}
+.username_field_container,
+.password_field_container{
+    justify-content: space-between;
+}
+
+.username_input,
+.password_input{
     outline: none;
-    background-color: darkred;
-    cursor: pointer;
+    border: none;
+    margin-left:15%;
+
 }
+.password_label,
+.username_label{
+    margin-right: 35%;
+    
+}
+.buttons_container{
+    justify-content: space-between;
+    flex-direction: row;
+
+}
+.login_button,
+.signup_button{
+    padding: 0rem 1rem;
+}
+.login_button{
+    margin-left: 22.5%;
+}
+.signup_button{
+    margin-right: 1rem;
+}
+
