@@ -10,32 +10,32 @@ export const characterSchema = new mongoose.Schema({
     },
     level: {
         type: Number,
-        required: true,
+        required: false,
         default: 1
     },
     experience: {
         type: Number,
-        required: true,
+        required: false,
         default: 0
     },
     health: {
         type: Number,
-        required: true,
+        required: false,
         default: 100
     },
     mana: {
         type: Number,
-        required: true,
+        required: false,
         default: 100
     },
     location: {
         type: String,
-        required: true,
+        required: false,
         default: "home"
     },
     inventory: {
-        type: inventorySchema,
-        required: true,
+        type: [inventorySchema],
+        required: false,
         default: {
             "slot_01": "",
             "slot_02": "",
@@ -46,8 +46,8 @@ export const characterSchema = new mongoose.Schema({
         }
     },
     equipment: {
-        type: equipmentSchema,
-        required: true,
+        type: [equipmentSchema],
+        required: false,
         default: {
             head: "",
             hands: "",
@@ -59,3 +59,4 @@ export const characterSchema = new mongoose.Schema({
         }
     }
 });
+
