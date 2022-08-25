@@ -4,7 +4,7 @@ import { checkPasswordStrength } from "../../utils/checkPasswordStrength.js";
 /*
 * Get the HTML dom elements and save them in variables
 */
-const registerForm = document.getElementById('register-form');
+const registerForm = document.getElementById('register');
 
 /*
 * $params {event} - event passed to eventListener
@@ -13,10 +13,10 @@ const registerForm = document.getElementById('register-form');
 const register = async (e) => {
     e.preventDefault();
 
-    const registerUsername = document.getElementById('register-form__username');
-    const registerPassword = document.getElementById('register-form__password');
-    const registerPasswordConfirm = document.getElementById('register-form__password-confirm');
-    const registerEmail = document.getElementById('register-form__email');
+    const registerUsername = document.getElementById('username_input__register');
+    const registerPassword = document.getElementById('password_input__register');
+    const registerPasswordConfirm = document.getElementById('verify_password_input__register');
+    const registerEmail = document.getElementById('email_input__register');
 
     if ( !registerUsername.value || !registerPassword.value || !registerPasswordConfirm.value || !registerEmail.value ) {
         alert('Please fill in all fields');
