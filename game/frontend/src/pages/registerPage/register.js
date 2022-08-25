@@ -47,6 +47,7 @@ const register = async (e) => {
         }
 
     const response = await saveUser(user);
+    console.log(response);
     if (response.status === 200) {
         alert('User registered');
         window.location.href = '/login';
