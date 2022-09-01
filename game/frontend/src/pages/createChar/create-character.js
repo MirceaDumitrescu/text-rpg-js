@@ -133,14 +133,14 @@ const saveNewCharData = async (e) => {
 * by combining the new character data with the existing user data
 * {param} inputUsername - the username
 */
-const createCharDataObject = ( inputUsername ) => {
+const createCharDataObject = async ( inputUsername ) => {
 
     const characterData = createCharacterClass(
         inputUsername,
         currentClassSelected
       );
-      const userOriginalData = await getUserID(inputUsername);
-      if (!userOriginalData) {
+      const originalData = await getUserID(inputUsername);
+      if (!originalData) {
         alert('User not found');
         return;
       }
@@ -149,7 +149,7 @@ const createCharDataObject = ( inputUsername ) => {
         userOriginalData.characterData[key] = characterData[key];
       });
 
-      return userOriginalData;
+      return originalData;
 
 };
 
