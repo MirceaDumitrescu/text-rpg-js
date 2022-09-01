@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../styles/create-character.css">
+    <script src="./create-character.js" type='module' defer></script>
+    <title>Create Character page</title>
+    <style>
+        .character-select__wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+            background-color: antiquewhite;
+            border: 2px solid black;
+        }
+
+        .character-select__screen {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .arrow {
+            font-size: 2rem;
+            background-color: rgb(74, 74, 74);
+            color: white;
+            padding: 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .arrow:hover {
+            background-color: rgb(118, 118, 118);
+            color: white;
+        }
+
+        .character-select__image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-flow: column;
+            padding: 2rem;
+        }
+
+        .character-image {
+            min-width: 170px;
+            min-height: 300px;
+            max-width: 170px;
+            max-height: 300px;
+            background-color: aliceblue;
+            margin: .5rem;
+        }
+
+        .character-select__image--class-name {
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-align: center;
+            margin-top: .5rem;
+        }
+
+    </style>
+</head>
+<body>
+    <nav>Nav menu here</nav>
+    <main class="character-select__wrapper">
+        <div class="character-select__container">
+            <h1>Choose your race</h1>
+        </div>
+        <section class="character-select__screen">
+            <div class="character-select--left arrow"><</div>
+            <div class="character-select__image">
+                <img src="" alt="Character Image" id='character-image' class='character-image'>
+                <div class="character-select__image--class-name" id='class-name'>Class name here</div>
+            </div>
+            <div class="character-select--right arrow">></div>
+        </section>
+
+        <form action="" class="character_select__name">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name">
+            <button class="submit-name">Submit</button>
+        </form>
+
+    </main>
+</body>
+</html>

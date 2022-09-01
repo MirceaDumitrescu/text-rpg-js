@@ -1,4 +1,4 @@
-import { saveUser } from "../../services/saveUser.js";
+import { registerNewUser } from "../../services/registerNewUser.js";
 import { checkPasswordStrength } from "../../utils/checkPasswordStrength.js";
 
 /*
@@ -46,7 +46,7 @@ const register = async (e) => {
             email
         }
 
-    const response = await saveUser(user);
+    const response = await registerNewUser(user);
     if (response.status === 200) {
         alert('User registered');
         window.location.href = '/login';
