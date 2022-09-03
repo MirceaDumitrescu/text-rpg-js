@@ -18,7 +18,7 @@ const register = async (e) => {
     const registerPasswordConfirm = document.getElementById('verify_password_input__register');
     const registerEmail = document.getElementById('email_input__register');
 
-    if ( !registerUsername.value || !registerPassword.value || !registerPasswordConfirm.value || !registerEmail.value ) {
+    if (!registerUsername.value || !registerPassword.value || !registerPasswordConfirm.value || !registerEmail.value) {
         alert('Please fill in all fields');
         return;
     };
@@ -41,10 +41,10 @@ const register = async (e) => {
     };
 
     const user = {
-            username,
-            password,
-            email
-        }
+        username,
+        password,
+        email
+    }
 
     const response = await saveUser(user);
     console.log(response);
@@ -58,4 +58,4 @@ const register = async (e) => {
 
 registerForm.addEventListener('submit', (e) => {
     register(e);
-    });
+});

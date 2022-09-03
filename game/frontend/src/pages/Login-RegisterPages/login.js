@@ -2,21 +2,22 @@
 import { loginUser } from "../../services/loginUser.js";
 
 function register_slide() {
-    loginForm.style.left = '-450px';
-    registerForm.style.left = '0';
-    slideButton.style.left = '102px';
-  }
+    loginForm.classList.remove('show');
+    registerForm.classList.add('show');
+    slideButton.classList.add('slide');
+}
 
-  function login_slide() {
-    loginForm.style.left = '0';
-    registerForm.style.left = '450px';
-    slideButton.style.left = '0';
-  }
+function login_slide() {
+    registerForm.classList.remove('show');
+    loginForm.classList.add('show');
+    slideButton.classList.remove('slide');
+}
 
 
 const loginForm = document.querySelector('#login');
 const registerForm = document.querySelector('#register');
 const slideButton = document.querySelector('#button_transition');
+const agrrementCheckbox = document.querySelector('#checkbox_agrrement');
 
 const loginTab = document.querySelector('#login-tab');
 const registerTab = document.querySelector('#register-tab');
@@ -30,6 +31,11 @@ const loginPassword = document.querySelector('#password_input__login');
 
 const authenticateUser = async (e) => {
     e.preventDefault();
+
+    if (!agrrementCheckbox.checked) {
+        alert('Please agree to the terms and conditions');
+        return;
+    }
 
     const username = loginUsername.value;
     const password = loginPassword.value;

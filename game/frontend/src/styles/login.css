@@ -1,226 +1,227 @@
 @import url('https://fonts.googleapis.com/css2?family=Romanesco&display=swap');
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-body{
-    background-image: url(./assets/loginPage/papper_background.jpg);
-    font-family: 'Romanesco', cursive;
-
+body {
+  background-image: url(./assets/loginPage/papper_background.jpg);
+  font-family: 'Romanesco', cursive;
 }
-.centered-flex-column{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.header_title{
-    font-size: 8rem;
-    width: 100%;
-    text-align: center;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    text-shadow: 0px 20px 10px sandybrown;
-    color: darkred;
-    letter-spacing: 2px;
-    -webkit-text-stroke: 0.5px black;
-    cursor: default;
-    user-select: none;
-
+.centered-flex-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.form_container{
-    background-color:blanchedalmond;
-    width: 360px;
-    height: 360px;
-    border: 1px solid sandybrown;
-    border-radius: 10%;
-    box-shadow: 0 -15px 100px 10px sandybrown;
-    gap: 2rem;
-    position: relative;
-    overflow: hidden;
+.header_title {
+  font-size: 8rem;
+  width: 100%;
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  text-shadow: 0px 20px 10px sandybrown;
+  color: darkred;
+  letter-spacing: 2px;
+  -webkit-text-stroke: 0.5px black;
+  cursor: default;
+  user-select: none;
+}
 
+.form_container {
+  background-color: blanchedalmond;
+  width: 360px;
+  height: 360px;
+  border: 1px solid sandybrown;
+  border-radius: 10%;
+  box-shadow: 0 -15px 100px 10px sandybrown;
+  gap: 2rem;
+  position: relative;
+  overflow: hidden;
 }
 
 /* Slide Buttons */
-.buttons_container{
-    width: 60%;
-    display: flex;
-    justify-content: space-evenly;
-    margin-top: 2rem;
-    box-shadow: 0 0 20px 9px #ff61241f;
-    border-radius: 30px;
-    position: relative;
-
-
+.buttons_container {
+  width: 60%;
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 2rem;
+  box-shadow: 0 0 20px 9px #ff61241f;
+  border-radius: 30px;
+  position: relative;
 }
-.toggle_button{
-    font-size: 1rem;
-    background: transparent;
-    cursor: pointer;
-    padding: 0.5rem 0.5rem;
-    border: 0;
-    outline: none;
-    position: relative;
+.toggle_button {
+  font-size: 1rem;
+  background: transparent;
+  cursor: pointer;
+  padding: 0.5rem 0.5rem;
+  border: 0;
+  outline: none;
+  position: relative;
 }
-#button_transition{
-    position: absolute;
-    top: 0;
-    left: 0;
-    backdrop-filter: sepia(100%);
-    height: 100%;
-    width: 7rem;
-    border-radius: 30px;
-    border: 1px solid sandybrown;
-    transition: 500ms;
-
+.button_transition {
+  position: absolute;
+  top: 0;
+  left: 0;
+  backdrop-filter: sepia(100%);
+  height: 100%;
+  width: 7rem;
+  border-radius: 30px;
+  border: 1px solid sandybrown;
+  transition: 500ms;
 }
 /* Inputs */
 
-.input_fields_container{
-    width: 100%;
-    align-items: flex-start;
-    transition: 500ms;
-
+.input_fields_container {
+  width: 100%;
+  align-items: flex-start;
+  transition: 500ms;
 }
-.input_field{
-    text-align: center;
-    width: 90%;
-    margin: 0.5rem auto;
-    outline: none;
-    background-color: transparent;
-    border-top: 0;
-    border-left: 0;
-    border-right: 0;
-    border-bottom: 1px solid black;
-}
-
-.checkbox_container{
-    align-self: flex-end;
-    margin-right: 1.2rem;
-    display: flex;
-    gap: 0.5rem;
+.input_field {
+  text-align: center;
+  width: 90%;
+  margin: 0.5rem auto;
+  outline: none;
+  background-color: transparent;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 1px solid black;
 }
 
-.checkbox_container2{
-    align-self: center;
-    margin-right: 1.2rem;
-    display: flex;
-    gap: 0.5rem;
+.checkbox_container {
+  align-self: flex-end;
+  margin-right: 1.2rem;
+  display: flex;
+  gap: 0.5rem;
 }
 
-.submit_button{
-    color: blanchedalmond;
-    width: 40%;
-    margin: 0.75rem auto;
-    margin-bottom: 1.5rem;
-    padding: 0.5rem 0.2rem;
-    border-radius: 30px;
-    border: 0;
-    outline: none;
-    background-color: darkred;
-    cursor: pointer;
+.checkbox_container2 {
+  align-self: center;
+  margin-right: 1.2rem;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.submit_button {
+  color: blanchedalmond;
+  width: 40%;
+  margin: 0.75rem auto;
+  margin-bottom: 1.5rem;
+  padding: 0.5rem 0.2rem;
+  border-radius: 30px;
+  border: 0;
+  outline: none;
+  background-color: darkred;
+  cursor: pointer;
 }
 
 
 /* Slide and positions */
-#login{
-    position: absolute;
-    top: 100px;
-    left: 0;
-
+.login-tab {
+  display: none;
+  position: absolute;
+  top: 100px;
+  /* left: 0; */
 }
-#register{
-    top: 100px;
-    left: 450px;
-    position: absolute;
+.register-tab {
+  display: none;
+  top: 100px;
+  position: absolute;
 }
 
+.show {
+  display: flex;
+}
+
+.slide {
+  left: 102px;
+}
 
 /* fire */
 .mo-fire {
-    width: 200px;
-    height: auto;
-    position: absolute;
-    left:70%;
-    margin-left: -100px;
-    bottom: 0px;
+  width: 200px;
+  height: auto;
+  position: absolute;
+  left: 70%;
+  margin-left: -100px;
+  bottom: 0px;
+}
+.mo-fire2 {
+  width: 200px;
+  height: auto;
+  position: absolute;
+  right: 65%;
+  margin-left: -100px;
+  bottom: 0px;
+}
+.mo-fire2 svg {
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+.mo-fire svg {
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+.flame {
+  animation-name: flamefly;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  opacity: 0;
+  transform-origin: 50% 50% 0;
+}
+.flame.one {
+  animation-delay: 1s;
+  animation-duration: 3s;
+}
+.flame3.two {
+  animation-duration: 5s;
+  animation-delay: 1s;
+}
+
+.flame-main {
+  animation-name: flameWobble;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+.flame-main.one {
+  animation-duration: 4s;
+  animation-delay: 1s;
+}
+.flame-main.two {
+  animation-duration: 3s;
+  animation-delay: 2s;
+}
+.flame-main.three {
+  animation-duration: 2.1s;
+  animation-delay: 3s;
+}
+.flame-main.four {
+  animation-duration: 3.2s;
+  animation-delay: 4s;
+}
+.flame-main.five {
+  animation-duration: 2.5s;
+  animation-delay: 5s;
+}
+@keyframes flameWobble {
+  50% {
+    transform: scale(1, 1.2) translate(0, -30px) rotate(-2deg);
   }
-  .mo-fire2 {
-    width: 200px;
-    height: auto;
-    position: absolute;
-    right:65%;
-    margin-left: -100px;
-    bottom: 0px;
+}
+@keyframes flamefly {
+  0% {
+    transform: translate(0) rotate(180deg);
   }
-  .mo-fire2 svg {
-    width: 100%;
-    height: auto;
-    position: relative
+  50% {
+    opacity: 1;
   }
-  .mo-fire svg {
-    width: 100%;
-    height: auto;
-    position: relative
-  }
-  .flame {
-    animation-name: flamefly;
-    animation-duration: 2s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
+  100% {
+    transform: translate(-20px, -100px) rotate(180deg);
     opacity: 0;
-    transform-origin: 50% 50% 0;
   }
-  .flame.one {
-    animation-delay: 1s;
-    animation-duration: 3s;
-  }
-  .flame3.two{
-    animation-duration: 5s;
-    animation-delay: 1s;
-  }
-  
-  .flame-main {
-    animation-name: flameWobble;
-    animation-duration: 3s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-  }
-  .flame-main.one {
-    animation-duration: 4s;
-    animation-delay: 1s;
-  }
-  .flame-main.two {
-    animation-duration: 3s;
-    animation-delay: 2s;
-  }
-  .flame-main.three {
-    animation-duration: 2.1s;
-    animation-delay: 3s;
-  }
-  .flame-main.four {
-    animation-duration: 3.2s;
-    animation-delay: 4s;
-  }
-  .flame-main.five {
-    animation-duration: 2.5s;
-    animation-delay: 5s;
-  }
-  @keyframes flameWobble {
-    50% {
-      transform: scale(1,1.2) translate(0, -30px) rotate(-2deg);
-    }
-  }
-  @keyframes flamefly {
-    0%{
-      transform: translate(0) rotate(180deg);
-    }
-     50% {
-       opacity: 1;
-    }
-    100% {
-      transform: translate(-20px, -100px) rotate(180deg);
-      opacity: 0;
-    }}
+}
