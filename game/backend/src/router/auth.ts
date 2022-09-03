@@ -99,6 +99,7 @@ router.post("/login", async (req:any , res:any) => {
 			res.header("auth-token", token).send(token);
 		} catch (err) {
 			res.json({ message: err });
+			console.log(err)
 		}
 	}
 });
